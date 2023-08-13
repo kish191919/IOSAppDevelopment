@@ -16,40 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="랜덤 색상" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d5-FW-tK5">
-                                <rect key="frame" x="24" y="83" width="345" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="랜덤 색상" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d5-FW-tK5">
+                                <rect key="frame" x="24" y="24" width="345" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-m2-U0N">
-                                <rect key="frame" x="20" y="150" width="353" height="200"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-m2-U0N">
+                                <rect key="frame" x="24" y="748" width="349" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="RY9-pI-XzA"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="k5h-qf-P9o"/>
-                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5h-Ze-pvR">
-                                <rect key="frame" x="159" y="409" width="75" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5h-Ze-pvR">
+                                <rect key="frame" x="24" y="972" width="83" height="34.333333333333371"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="색상변경"/>
+                                <connections>
+                                    <action selector="tapChangeColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iW7-F5-ri4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="JrC-m2-U0N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4wS-XF-Jo8"/>
-                            <constraint firstItem="q5h-Ze-pvR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HvU-tp-d8c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JrC-m2-U0N" secondAttribute="trailing" constant="20" id="JDx-Sb-Eo6"/>
-                            <constraint firstItem="JrC-m2-U0N" firstAttribute="top" secondItem="8d5-FW-tK5" secondAttribute="bottom" constant="20" id="M1I-mK-dGe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8d5-FW-tK5" secondAttribute="bottom" constant="24" id="aYT-gU-CGH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8d5-FW-tK5" secondAttribute="bottom" constant="688" id="oTH-Yc-knk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8d5-FW-tK5" secondAttribute="trailing" constant="24" id="pXB-By-avG"/>
-                            <constraint firstItem="8d5-FW-tK5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="tLu-KG-feo"/>
-                            <constraint firstItem="8d5-FW-tK5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="uzs-cP-J1L"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="JrC-m2-U0N" id="R2z-be-vCT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
